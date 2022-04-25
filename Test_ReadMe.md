@@ -7,6 +7,7 @@
 Folder/file details:
 
 IAC -> Terraform files
+
 .github\workflows -> build, Terraform and deploy workflows
 
 Deployed WebApp url:
