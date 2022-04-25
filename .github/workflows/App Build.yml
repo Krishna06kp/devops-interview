@@ -31,6 +31,9 @@ jobs:
 
       - name: Build with dotnet
         run: dotnet build --configuration Release
+        
+      - name: Run automated unit and integration tests
+        run: dotnet test Src\Presentation\BradyWeather\BradyWeather.Application.cspoj  /p:CollectCoverage=true /p:CoverletOutput=TestResults/ /p:CoverletOutputFormat=lcov
 
       - name: dotnet publish
         run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
